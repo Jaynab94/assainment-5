@@ -20,7 +20,15 @@ for (const btn of allBtn) {
         // console.log(event.target.innerText);
 
         const seat = event.target.innerText;
+        const bg = event.target.style.backgroundColor = "#1DD100";
+        
+
+
+
+
         // console.log(seat);
+
+
 
         const price = document.getElementById("seat-price").parentNode.parentNode.childNodes[3].childNodes[0].innerText;
 
@@ -72,19 +80,13 @@ for (const btn of allBtn) {
         updateTotalCost(price);
         updateGrandTotal();
 
-        // document.getElementById("next-button").addEventListener("click", function () {
-        //     const input = document.getElementById("next-button");
-        //     const inputValue = input.value;
 
-        //     if (inputValue === "number") {
-        //         if (inputValue.length < 11) {
-        //             alert("use 11");
-        //         }
-        //         else {
-        //             alert("use a number");
-        //         }
-        //     }
-        // });
+        document.getElementById("next-button").addEventListener("click", function () {
+
+
+
+        });
+
 
     });
 
@@ -102,6 +104,7 @@ continueButton.addEventListener("click", function () {
     modalCheckbox.checked = false;
 
     window.scrollTo(0, 0);
+
 });
 
 
@@ -157,6 +160,10 @@ function updateTotalCost(value) {
 
 
 
+function addBackgroundColor(elementid) {
+    const element = document.getElementsByTagName("kbd");
+    element.classList.add('bg-700');
+}
 
 
 
