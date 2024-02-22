@@ -113,7 +113,7 @@
                     </div>
                     <div><img src="images/cupon-devider.png" alt=""></div>
                     <div>
-                        <h1 class="text-[32px] font-bold text-black">NEW15</h1>
+                        <h1 class="text-[32px] font-bold text-black"><span id="coupon-code-1">NEW15</span></h1>
                         <p class="text-[18px] font-medium text-[#03071280]">Coupon Code</p>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                     </div>
                     <div><img src="images/cupon-devider.png" alt=""></div>
                     <div>
-                        <h1 class="text-[32px] font-bold text-black">Couple 20</h1>
+                        <h1 class="text-[32px] font-bold text-black"><span id="Coupon-code-2">COUPLE20</span></h1>
                         <p class="text-[18px] font-medium text-[#03071280]">Coupon Code</p>
                     </div>
                 </div>
@@ -182,13 +182,13 @@
                                 <p>Dhaka - Sylhet</p>
                             </div>
 
-                            <hr class="border-4 border-dotted mt-5">
+                            <hr class=" border-dashed mt-5 bg-black">
                             <div class="lg:flex justify-between mt-10">
                                 <p class="text-18px font-semibold text-[#03071299]">Departure Time</p>
                                 <p>9:00 PM</p>
                             </div>
 
-                            <hr class="border-4 border-dotted  mt-5">
+                            <hr class="border-dashed bg-black  mt-5">
                             <div class="lg:flex  justify-around items-center mt-10">
                                 <div class="text-center bg-[#0307120D] rounded-2xl p-4">
                                     <p class="text-[16px] font-medium">Boarding Point - Laxmipur</p>
@@ -234,7 +234,7 @@
                         </div>
 
                         <div>
-                            <hr class="border-dashed">
+                            <hr class="border-dashed bg-black">
                             <div class="flex justify-between items-center  w-[800px]">
                                 <div class="flex gap-2 p-4">
                                     <img src="images/seat-gray.png" alt="">
@@ -248,7 +248,7 @@
 
                             </div>
 
-                            <hr class="border-dashed">
+                            <hr class="border-dashed bg-black">
 
                         </div>
                         <div class="flex justify-end -translate-x-10 ">
@@ -320,7 +320,7 @@
                 <div class="w-[420px] ">
                     <h2 class="text-[24px] font-semibold mb-4">Select Your Seat</h2>
 
-                    <hr class="border-dashed">
+                    <hr class="border-dashed bg-black">
 
                     <div class="w-[430px] h-[250px] mt-5 bg-[#F7F8F8] rounded-3xl p-6">
 
@@ -331,32 +331,32 @@
 
                         </div>
 
-                        <hr class=" mt-4 border-dashed">
+                        <hr class=" mt-4 border-dotted bg-black">
                         <!-- append here new child -->
                         <div id="selected-seat-container" class="">
 
                         </div>
 
-                        <hr class="border-dashed">
+                        <hr class="border-dotted bg-black">
                         <!-- total cost container -->
                         <div class="flex justify-between">
-                            <p class="text-[16px] font-medium">total price</p>
+                            <p class="text-[16px] font-medium">Total Price</p>
                             <p class="text-[16px] font-medium">BDT <span id="total-price">0</span></p>
                         </div>
                         <!-- cupon input container -->
                         <div class="flex items-center  my-2">
 
-                            <input type="text" placeholder="Have any cupon?" id="cupon-button"
-                                class="w-[300px] h-10 p-4 bg-[#FFF] h-10">
+                            <input id="cupon-code" type="text" placeholder="Have any cupon?" 
+                                class="w-[300px] rounded-l-md p-4 bg-[#FFF] h-10">
 
-                            <button
-                                class=" bg-[#1DD100] text-white w-20 p-2  text-[16px] font-semibold rounded-xl">apply</button>
+                            <button onclick="updateGrandTotal('apply-button')" id="apply-button"
+                                class=" bg-[#1DD100] text-white w-20 p-2  text-[16px] font-semibold rounded-md">apply</button>
                         </div>
 
                         <!-- grand total container -->
                         <div class="flex justify-between items-center">
-                            <p class="text-[16px] font-medium">Grand total</p>
-                            <p class="text-[16px] font-medium">BDT <span id="grand-total">0</span></p>
+                            <p class="text-[16px] font-medium">Grand Total</p>
+                            <p class="text-[16px] font-medium">BDT <span id="grand-total">0</span> </p>
                         </div>
 
 

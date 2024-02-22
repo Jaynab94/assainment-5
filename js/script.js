@@ -48,17 +48,39 @@ for (const btn of allBtn) {
         selectedContainer.appendChild(div);
 
         updateTotalCost(price);
+        updateGrandTotal();
 
     });
 }
 
 
-
-function updateTotalCost(value) {
-    
+function updateGrandTotal(status) {
     const totalCost = getConvertedValue("total-price");
-    const sum=totalCost+parseInt(value);
-    document.getElementById("total-price").innerText=sum;
+
+    if (status == undefined) {
+
+        document.getElementById("grand-total").innerText = totalCost;
+
+    }
+
+    else {
+        const couponCode = document.getElementById("cupon-code").value;
+
+
+        if (couponCode == "NEW15") {
+            const discounted = totalCost * 0.15;
+            document.getElementById("grand-total").innerText=totalCost-discounted;
+        }
+        else if(couponCode == "COUPLE20"){
+            const discounted = totalCost * 0.2;
+            document.getElementById("grand-total").innerText=totalCost-discounted;
+        }
+
+        else {
+            alert("please enter valid cupon coad");
+        }
+
+    }
 
 
 }
@@ -68,13 +90,14 @@ function updateTotalCost(value) {
 
 
 
+function updateTotalCost(value) {
+
+    const totalCost = getConvertedValue("total-price");
+    const sum = totalCost + parseInt(value);
+    document.getElementById("total-price").innerText = sum;
 
 
-
-
-
-
-
+}
 
 
 
