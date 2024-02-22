@@ -25,6 +25,18 @@ for (const btn of allBtn) {
         const price = document.getElementById("seat-price").parentNode.parentNode.childNodes[3].childNodes[0].innerText;
 
 
+        // update seats
+        const seats = getConvertedValue("seats-left");
+        document.getElementById("seats-left").innerText = seats - 1;
+
+        const count = getConvertedValue("seat-count");
+        document.getElementById("seat-count").innerText = count+1;
+
+
+
+
+
+
 
 
         const selectedContainer = document.getElementById("selected-seat-container");
@@ -54,6 +66,12 @@ for (const btn of allBtn) {
 }
 
 
+
+
+
+
+
+
 function updateGrandTotal(status) {
     const totalCost = getConvertedValue("total-price");
 
@@ -69,11 +87,11 @@ function updateGrandTotal(status) {
 
         if (couponCode == "NEW15") {
             const discounted = totalCost * 0.15;
-            document.getElementById("grand-total").innerText=totalCost-discounted;
+            document.getElementById("grand-total").innerText = totalCost - discounted;
         }
-        else if(couponCode == "COUPLE20"){
+        else if (couponCode == "COUPLE20") {
             const discounted = totalCost * 0.2;
-            document.getElementById("grand-total").innerText=totalCost-discounted;
+            document.getElementById("grand-total").innerText = totalCost - discounted;
         }
 
         else {
