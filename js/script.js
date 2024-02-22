@@ -31,10 +31,10 @@ for (const btn of allBtn) {
         // update seats
         const seatCount = getConvertedValue('seat-count');
 
-        if (seatCount+1 >4) {
+        if (seatCount + 1 > 4) {
             alert("Limit over")
         }
-        
+
 
         const seats = getConvertedValue("seats-left");
         document.getElementById("seats-left").innerText = seats - 1;
@@ -72,6 +72,20 @@ for (const btn of allBtn) {
         updateTotalCost(price);
         updateGrandTotal();
 
+        // document.getElementById("next-button").addEventListener("click", function () {
+        //     const input = document.getElementById("next-button");
+        //     const inputValue = input.value;
+
+        //     if (inputValue === "number") {
+        //         if (inputValue.length < 11) {
+        //             alert("use 11");
+        //         }
+        //         else {
+        //             alert("use a number");
+        //         }
+        //     }
+        // });
+
     });
 
 
@@ -79,7 +93,16 @@ for (const btn of allBtn) {
 }
 
 
+const continueButton = document.getElementById("Continue-button");
 
+
+continueButton.addEventListener("click", function () {
+
+    const modalCheckbox = document.getElementById("my_modal_7");
+    modalCheckbox.checked = false;
+
+    window.scrollTo(0, 0);
+});
 
 
 
