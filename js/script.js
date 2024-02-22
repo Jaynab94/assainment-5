@@ -25,12 +25,22 @@ for (const btn of allBtn) {
         const price = document.getElementById("seat-price").parentNode.parentNode.childNodes[3].childNodes[0].innerText;
 
 
+
+
+
         // update seats
+        const seatCount = getConvertedValue('seat-count');
+
+        if (seatCount+1 >4) {
+            alert("Limit over")
+        }
+        
+
         const seats = getConvertedValue("seats-left");
         document.getElementById("seats-left").innerText = seats - 1;
 
         const count = getConvertedValue("seat-count");
-        document.getElementById("seat-count").innerText = count+1;
+        document.getElementById("seat-count").innerText = count + 1;
 
 
 
@@ -63,6 +73,9 @@ for (const btn of allBtn) {
         updateGrandTotal();
 
     });
+
+
+
 }
 
 
